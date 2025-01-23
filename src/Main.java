@@ -42,6 +42,15 @@ public class Main {
                 System.out.println ("Разность весов бойцов  " + "= " + Math.abs(boxerWeight-boxerWeight_2));
                 System.out.println ("Остаток от деления веса бойцов  " + "= " + mod);
 
+                var workHours = 8;
+                var workAmount = 640;
+                var numWorkers = 640/8;
+                System.out.println ("Всего работников в компании - " + numWorkers + " человек");
+
+                numWorkers = numWorkers + 94;
+                workAmount = numWorkers * workHours;
+
+                System.out.println("Если в компании работает " + numWorkers + " человек, то всего " + workAmount + " часов работы может быть поделено между сотрудниками");
             }
     public static double sumWeight(double a, double b) {
         return a + b;
