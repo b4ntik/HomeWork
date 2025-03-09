@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 
 public class Main {
     public static void main(String[] args) {
@@ -33,7 +31,6 @@ public class Main {
             char temp = reverseFullName[i];
             reverseFullName[i] = reverseFullName[reverseFullName.length - 1 - i];
             reverseFullName[reverseFullName.length - 1 - i] = temp;
-
         }
         System.out.print(reverseFullName);
     }
