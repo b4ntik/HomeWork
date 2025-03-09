@@ -19,7 +19,6 @@ public class Main {
                 max = payment[i];
             }
         }
-
         System.out.println("Минимальная сумма трат за неделю составила " + min + " рублей. Макимальная сумма трат за неделю составила " + max + " рублей");
         //задание №3
         double averagePayment;
