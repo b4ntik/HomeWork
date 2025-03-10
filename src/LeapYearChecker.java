@@ -17,26 +17,42 @@ public class LeapYearChecker {
         return false;
     }
 
-    //public class NeedVersionApplication {
-        public static String needUpdate(int osType, int yearOfManufacture) {
-            int currentYear = LocalDate.now().getYear();
-            String text = "";
-            if (osType == 0 && yearOfManufacture == currentYear) {
-                text = " обычная версия для iOs ";
-                return text;
-            } else if (osType == 0 && yearOfManufacture < currentYear) {
-                text = " облегченная версия для iOs";
-                return text;
-            } else if (osType == 1 && yearOfManufacture == currentYear) {
-                text = " обычная версия для Android";
-                return text;
-            } else if (osType == 1 && yearOfManufacture < currentYear) {
-                text = " облегченная версия для Android";
-                return text;
-            }
+    public static String needUpdate(int osType, int yearOfManufacture) {
+        int currentYear = LocalDate.now().getYear();
+        String text = "";
+        if (osType == 0 && yearOfManufacture == currentYear) {
+            text = " обычная версия для iOs ";
+            return text;
+        } else if (osType == 0 && yearOfManufacture < currentYear) {
+            text = " облегченная версия для iOs";
+            return text;
+        } else if (osType == 1 && yearOfManufacture == currentYear) {
+            text = " обычная версия для Android";
+            return text;
+        } else if (osType == 1 && yearOfManufacture < currentYear) {
+            text = " облегченная версия для Android";
             return text;
         }
+        return text;
+    }
 
+    public static int deliveryTime(int distance) {
+        int deliveryDistance = distance;
+        int deliveryDays;
+        if (deliveryDistance > 100 || deliveryDistance < 0) {
+            System.out.println("На такие расстояния доставки нет");
+        } else if (deliveryDistance > 0 && deliveryDistance <= 20) {
+            deliveryDays = 1;
+            return  deliveryDays;
+        } else if (deliveryDistance > 20 && deliveryDistance <= 60) {
+            deliveryDays = 2;
+            return deliveryDays;
+        } else if (deliveryDistance > 60 && deliveryDistance <= 100) {
+            deliveryDays = 3;
+            return  deliveryDays;
+        }
+        return deliveryDistance;
+    }
 
         public static void main(String[] args) {
             //задание №1
@@ -65,7 +81,12 @@ public class LeapYearChecker {
                 clientOS = 1;
             }
             System.out.println("Вам нужна " + needUpdate(clientOS, clientDeviceYear));
+            //задание №3
+            System.out.println("Введите расстояние до офиса");
+            int distance = in.nextInt();
+            System.out.println("Время доставки " + deliveryTime(distance) + " дней");
         }
+
     }
 
 
