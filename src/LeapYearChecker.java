@@ -53,7 +53,6 @@ public class LeapYearChecker {
         }
         return deliveryDistance;
     }
-
         public static void main(String[] args) {
             //задание №1
             System.out.println("Введите год");//ввод года
