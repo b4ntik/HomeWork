@@ -16,7 +16,7 @@ public class Author {
         this.authorFamily = authorFamily;
     }
 }
-//publi
+//publiс
 public static void main(String[] args) {
 }
 
