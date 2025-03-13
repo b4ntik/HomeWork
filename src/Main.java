@@ -11,7 +11,9 @@ public class Main {
         for (Book book : books) {
             book.displayBookInfo();
             System.out.println();
-
+            books[0].setPublishYear(1915);
+            System.out.println("Обновленные данные");
+            books[0].displayBookInfo();
 
         }
     }
