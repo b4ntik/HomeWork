@@ -13,7 +13,7 @@ public class Author {
     }
 
     public String getAuthorFamily() {
-        return authorFamily;
+        return this.authorFamily;
     }
 
 }

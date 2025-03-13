@@ -1,13 +1,11 @@
 public class Book {
     private final String bookName;
-    private final Author authorName;
-    private final Author authorFamily;
+    private final Author author;
     private int publishYear;
 
     public Book(String bookName, Author authorName, Author authorFamily, int publishYear) {
         this.bookName = bookName;
-        this.authorName = authorName;
-        this.authorFamily = authorFamily;
+        this.author = authorName;
         this.publishYear = publishYear;
     }
 
@@ -26,7 +24,7 @@ public class Book {
 
     public void displayBookInfo() {
         System.out.println("Название книги " + getBookName());
-        System.out.println("Автор " + authorName.getAuthorName() + " " + authorFamily.getAuthorFamily());
+        System.out.println("Автор " + author.getAuthorName() + " " + author.getAuthorFamily());
         System.out.println("Год выпуска " + getPublishYear());
     }
 }
