@@ -27,6 +27,11 @@ public class Book {
         System.out.println("Автор " + author.getAuthorName() + " " + author.getAuthorFamily());
         System.out.println("Год выпуска " + getPublishYear());
     }
+    public String toString() {
+        return "Название книги " + this.bookName + " Автор " + this.author + " Год публикации " + this.publishYear;
+    }
+      //  public equals(){
+    //}
 }
 
 
