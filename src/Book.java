@@ -27,11 +27,24 @@ public class Book {
         System.out.println("Автор " + author.getAuthorName() + " " + author.getAuthorFamily());
         System.out.println("Год выпуска " + getPublishYear());
     }
+
     public String toString() {
         return "Название книги " + this.bookName + " Автор " + this.author + " Год публикации " + this.publishYear;
     }
-      //  public equals(){
-    //}
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+
+        Book book = (Book) obj;
+        return bookName.equals(book.bookName) && author.getAuthorName().equals(book.author.getAuthorName());
+    }
+
+    @Override
+    public int hashCode() {
+        return 31 * bookName.hashCode() + author.getAuthorName().hashCode();
+    }
 }
 
 

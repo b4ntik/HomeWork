@@ -15,8 +15,9 @@ public class Author {
     public String getAuthorFamily() {
         return this.authorFamily;
     }
-        public String toString(){
-            return " Автор " + this.authorName + " " + this.authorFamily;
+
+    public String toString() {
+        return " Автор " + this.authorName + " " + this.authorFamily;
     }
 
 }
